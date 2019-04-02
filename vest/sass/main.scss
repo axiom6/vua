@@ -1,0 +1,13 @@
+// Reset
+@import "global/reset.scss";
+//@import "icons/icons.scss";
+// Mixins, functions and variables
+@import "./shared.scss"; // resources/resources.scss";
+// NOTE We want to dispose of bootstrap styling at some point.
+//@import "bootstrap/bootstrap.scss";
+// NOTE We should use our own styles for checkbox
+// @import "overrides/overrides.scss"; // overrides are a mess
+// NOTE We want to dispose of these.
+@import "global/utility-global.scss";
+// Grid stuff
+@import "grid/grid-global-styles.scss";
