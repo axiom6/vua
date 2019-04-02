@@ -4,21 +4,26 @@ import Router      from 'vest/libs/vue/vue-router.esm.js'; Vue.use(Router);
 import AppLayout   from 'vest/comp/admin/AppLayout.vue'
 import AuthLayout  from 'vest/comp/auth/AuthLayout.vue'
 
-/*
-let lazyLoading1 = (name) => {
-  let url = `vest/comp/${name}.vue`;
-  return import(url).then( console.log('Router url not found', url ); ) };
-*/
+let lazyLoading  = (name) => () => {
+  console.log( 'Router', name, `comp/${name}.vue` )
+  return import(               `comp/${name}.vue` ); }
 
-let lazyLoading = (name) => {
-  let url = `comp/${name}.vue`;
-  return import(url)
+let lazyLoadinh = ( name, index=false ) => () => import(`comp/${name}${index ? '/index' : ''}.vue`)
+
+let lazyLoadini = ( name, chunk="none", index=false ) => () => {
+
+  let url = index ? `comp/${name}/index.vue` : `comp/${name}.vue`;
+      url = (chunk!=="none") ? `/* webpackChunkName: ${chunk} */ `+url : url;
+
+  return import( url )
     .then(module => {
       module.default(); })
     .catch(error => {
       if( error===false){}
-      console.log('Router url not found', url ); });
+      console.log('Router url not found', url ); } );
 }
+
+if( lazyLoading===false && lazyLoadinh===false && lazyLoadini===false ) {}
 
 const EmptyParentComponent = {
   template:'<router-view></router-view>' };
