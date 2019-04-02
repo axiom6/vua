@@ -1,7 +1,8 @@
-import utils  from '../../services/utils.js'
-import { Store }  from '../../../src/store/Store.js'
 
-let palette = Store.getters.palette
+import store from '../../store/index.js'
+import utils from './utils.js'
+
+let palette = store.getters.palette
 
 const generateValue = () => {
   return Math.floor(Math.random() * 100)

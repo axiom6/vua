@@ -1,6 +1,8 @@
-import { Store } from '../../store/Store.js'
 
-let palette = Store.getters.palette
+
+import store from '../../store/index.js'
+
+let palette = store.getters.palette
 
 export default {
   labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],

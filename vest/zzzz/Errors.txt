@@ -1,0 +1,5 @@
+* ../../../src/store/Store in ./vest/data/charts/DonutChartData.js
+* ../../../src/store/Store.js in ./vest/data/charts/PieChartData.js, ./vest/data/charts/LineChartData.js
+* ../../services/utils in ./vest/data/charts/BubbleChartData.js
+* ../../services/utils.js in ./vest/data/charts/LineChartData.js
+* ../../store/Store.js in ./vest/data/charts/VerticalBarChartData.js, ./vest/data/charts/HorizontalBarChartData.js and 1 other

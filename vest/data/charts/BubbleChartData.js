@@ -1,7 +1,8 @@
-import { Store } from '../../store/Store.js'
-import utils from '../../services/utils'
 
-let palette = Store.getters.palette;
+import store from '../../store/index.js'
+import utils from './utils.js'
+
+let palette = store.getters.palette;
 
 export default {
   datasets: [

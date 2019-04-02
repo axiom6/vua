@@ -23,12 +23,14 @@
 </template>
 
 <script>
-
+  
+  import VuesticWidget from '../../../vesc/widget/VuesticWidget.vue'
 import { yandexMap, ymapMarker } from './index.js'
 
 export default {
   name: 'yandex-maps-page',
   components: {
+    'vuestic-widget':VuesticWidget,
     yandexMap,
     ymapMarker,
   },
@@ -52,7 +54,7 @@ export default {
 }
 </script>
 <style lang="scss">
-@import "../../../vuestic-theme/vuestic-sass/resources/variables";
+@import "../../../sass/resources/variables";
 
 .yandex-maps-page {
   &__widget {

@@ -12,6 +12,7 @@
 </template>
 
 <script>
+
 import Resize from '../directives/ResizeHandler.js'
 export default {
   name: 'vuestic-layout',
@@ -35,7 +36,7 @@ export default {
 </script>
 
 <style lang="scss">
-  @import "../../sass/resources/resources";
+  @import "../../sass/shared.scss";
 .vuestic-layout {
   .content-wrap {
     margin-left: $content-wrap-ml;
